@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>计算器</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<script type="text/javascript" src="calculator.js"></script>
+</head>
+<body>
+	<div id="main">
+		<h3 class="te_1">计算器 <small>版本号2.0</small></h3>
+		<input id="num3" class="textbox" value="" autofocus readonly="readonly">
+		<button class="del_1" onclick="clearAll( )">CE</button>
+		<button class="del_1" onclick="clearOne( )">&larr;</button><br/>
+		<button value="7" onclick="getValue(this.value)">7</button>
+		<button value="8" onclick="getValue(this.value)">8</button>
+		<button value="9" onclick="getValue(this.value)">9</button>
+		<button value="+" onclick="getValue_2(this.value)">+</button>
+		<button value="4" onclick="getValue(this.value)">4</button>
+		<button value="5" onclick="getValue(this.value)">5</button>
+		<button value="6" onclick="getValue(this.value)">6</button>
+		<button value="-" onclick="getValue_2(this.value)">-</button>
+		<button value="1" onclick="getValue(this.value)">1</button>
+		<button value="2" onclick="getValue(this.value)">2</button>
+		<button value="3" onclick="getValue(this.value)">3</button>
+		<button value="*" onclick="getValue_2(this.value)">*</button>
+		<button value="0" onclick="getValue(this.value)">0</button>
+		<button value="." onclick="getValue(this.value)">.</button>
+		<button onclick="calc( )">=</button>
+		<button value="/" onclick="getValue_2(this.value)">/</button>
+
+	</div>
+</body>
+</html>

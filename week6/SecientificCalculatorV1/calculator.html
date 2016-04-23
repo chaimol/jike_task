@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>计算器</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<script type="text/javascript" src="calculator.js"></script>
+</head>
+<body>
+	<div id="main">
+		<h3 class="te_1">计算器 <small>版本号2.0</small></h3>
+		<input id="num3" class="textbox" value="" autofocus readonly="readonly"><br/>
+		<button id="button1" onclick="clearAll( )">CE</button>
+		<button id="button1" onclick="clearOne( )">&larr;</button>
+		<button id="button1" value="PI" onclick="getValue_4(this.value)">&piv;</button>
+		<button id="button1" value="^" onclick="getValue_2(this.value)">&#923;</button>
+		<button id="button1" value="sin" onclick="getValue_2(this.value)">sin</button>
+		<button id="button1" value="cos" onclick="getValue_2(this.value)">cos</button>
+		<button id="button1" value="tan" onclick="getValue_2(this.value)">tan</button>
+		<button id="button1" value="e" onclick="getValue_3(this.value)">e</button>
+		<button id="button1" value="log" onclick="getValue_2(this.value)">log</button>
+		<button id="button1" value="ln" onclick="getValue_2(this.value)">ln</button>
+		<button id="button1" value="√" onclick="getValue_2(this.value)">&radic;</button>
+		<button id="button1" value="1/x" onclick="getValue_2(this.value)">1/x</button>
+		<button id="button1" value="7" onclick="getValue(this.value)">7</button>
+		<button id="button1" value="8" onclick="getValue(this.value)">8</button>
+		<button id="button1" value="9" onclick="getValue(this.value)">9</button>
+		<button id="button1" value="+" onclick="getValue_2(this.value)">+</button>
+		<button id="button1" value="4" onclick="getValue(this.value)">4</button>
+		<button id="button1" value="5" onclick="getValue(this.value)">5</button>
+		<button id="button1" value="6" onclick="getValue(this.value)">6</button>
+		<button id="button1" value="-" onclick="getValue_2(this.value)">-</button>
+		<button id="button1" value="1" onclick="getValue(this.value)">1</button>
+		<button id="button1" value="2" onclick="getValue(this.value)">2</button>
+		<button id="button1" value="3" onclick="getValue(this.value)">3</button>
+		<button id="button1" value="*" onclick="getValue_2(this.value)">*</button>
+		<button id="button1" value="0" onclick="getValue(this.value)">0</button>
+		<button id="button1" value="." onclick="getValue(this.value)">.</button>
+		<button id="button1" onclick="calc( )">=</button>
+		<button id="button1" value="/" onclick="getValue_2(this.value)">/</button>
+
+	</div>
+</body>
+</html>

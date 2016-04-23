@@ -1,0 +1,40 @@
+/* 计算器  版本V2  2015.10.23*/
+ @charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+#main{
+	width: 600px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #E99067;
+	text-align: center;
+}
+.textbox{
+	width: 70%;
+	height: 50px;
+	border: 1px solid #8E9cad;
+	margin:10px 0;
+	font-size: 30px;
+}
+.text_1{
+	width: 10%;
+	text-align: left;
+}
+.te_1{
+	margin:10px 0;
+}
+button{
+	width: 100px;
+	height: 50px;
+	font-weight: bold;
+	font-size: 30px;
+	margin: 10px;
+}
+.del_1{
+	width: 200px;
+}
