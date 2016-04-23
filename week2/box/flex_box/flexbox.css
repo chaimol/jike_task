@@ -1,0 +1,48 @@
+@charset "utf-8";
+.col{
+	display:-webkit-flex;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	background-color: rgb(255,20,10);
+}
+#first{
+	background-color:#F39;
+	height: 200px;
+	-webkit-flex:1;
+}
+#second{
+	background-color: rgb(20,35,230);
+	height: 200px;
+	-webkit-flex:1;
+}
+#three{
+	background-color: rab(255,26,35);
+	height:200px;
+	-webkit-flex:1;
+}
+
+.col2{
+	display:-webkit-flex;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	background-color: rgb(255,20,10);
+	-webkit-flex-direction:column;
+}
+#first1{
+	-webkit-order:3;
+	background-color: #F39;
+	height: 200px;
+	-webkit-flex:1;
+}
+#second1{
+	-webkit-order:2;
+	background-color: rgb(20,35,230);
+	height: 200px;
+	-webkit-flex:1;
+}
+#three1{
+	-webkit-order:1;
+	background-color: rab(255,26,35);
+	height:200px;
+	-webkit-flex:1;
+}

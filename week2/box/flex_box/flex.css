@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+
+
+.col{
+	border:1px solid #000;
+	-webkit-column-count:3;
+	-webkit-column-width:300px;
+	-webkit-column-gap：10px;
+	-webkit-column-rule:2px dotted red;
+	
+}

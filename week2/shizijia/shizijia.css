@@ -1,0 +1,90 @@
+@charset "utf-8";
+/*CSS 十字架项目  
+date：2015.9.8
+版本：V1.0*/
+
+#outer{                                 
+height:100%;    /*获取页面高度*/
+}
+
+#main{                                  
+position:absolute;                
+top:50%;                       /*取得屏幕中心点为绝对定位参考点*/  
+left:50%;    
+}
+
+#main{
+	width:306px;
+	height:306px;
+	position:absolute;
+    padding:0px;
+	margin:-153px -153px;  
+	}
+
+#top2{
+	width:100px;
+	height:100px;
+	background-color:#C36;
+	border:1px dotted #3F6;
+	margin:0 auto;
+	box-shadow:0 0 2px 3px #9C0 inset;
+}
+
+#left2{
+	width:100px;
+	height:100px;
+	background-color:#9C0;
+	float:left;
+	border:1px groove #C96;
+	box-shadow:0 0 2px 3px #CF9 inset;
+}
+
+#center2{
+	width:100px;
+	height:100px;
+	text-align:center;
+	background-color:rgba(255,20,30,0.4);
+	border-left:1px groove #c96;
+	border-top:1px dotted #3f6;
+	border-right:1px groove #3f6;
+	border-bottom:1px dotted #c00;
+	box-shadow:0 0 2px 15px #F39 inset;
+	float:left;
+}
+
+#right2{
+	width:100px;
+	height:100px;
+	border:1px groove #3F6;
+	background-color: #FC0;
+	box-shadow:0 0 2px 3px #F33 inset;
+	float:left;
+}
+
+img.cent0{
+	position:relative;
+	top:38px;
+	bottom:38px;	
+	
+}
+
+#bottom2{
+	clear:both;
+	width:100px;
+	height:100px;
+	border:1px dotted #C00;
+	background-color:#C93;
+	box-shadow:0 0 2px 3px #0FF inset;
+	margin:0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
