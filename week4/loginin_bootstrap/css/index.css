@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.navbar{
+	margin-bottom: 0;
+}
+
+.jumbotron{
+	margin: 0;
+}
+
+.row{
+	margin-left: 0;
+	margin-right:0;
+}
+
+.panel{
+	margin:0px;
+	padding: 5px;
+	height: inherit;
+	border:none;
+	
+}
+
+.thumbnail{
+	padding:2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
