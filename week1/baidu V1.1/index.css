@@ -1,0 +1,129 @@
+#total{
+	width: 1002px;
+	height: 700px;
+	position: fixed;
+	
+}
+#u2{
+	clear: both;
+	color: white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 19px 0 5px 0;
+	padding: 0 96px 0 0;
+	height: 28px;
+	font-weight:bold;
+	font-size:13px;
+	font-family:arial;
+	font-variant:normal;
+	z-index: 5;
+	
+}
+	#u2 a.men2{
+		
+		width: 28px;
+		height: 24px;
+		margin-left:20px;
+	}
+ a.men2:link{color: #666;}
+ a.men2:visited{color:#666;}
+ a.men2:hover{color: rgb(0,0,204);}
+ a.men2:active{color: rgb(0,0,204);}
+ a.men3:link{color: #666;}
+ a.men3:visited{color:#666;}
+ a.men3:hover{color: rgb(0,0,204);}
+ a.men3:active{color: rgb(0,0,204);}
+
+	
+	#u2 a {
+	width: 45px;
+	height: 28px;
+	}
+	#u2 a.men3{
+		width: 44px;
+		height: 24px;
+		margin-left: 20px;
+	}
+
+#ico2{
+	text-align: center;
+	height: 600px;
+	margin:70px auto 10px auto;
+}
+
+form.inputs{
+	position: relative;
+	top:-460px;
+	left: auto;
+	width:630px; 
+	height:36px;
+	margin: 0px auto;
+}
+
+	input.s_text{
+	width: 526px;
+    height: 34px;
+    background: transparent;
+   border-style:1px solid #2d78f4;
+   float: left;
+   
+	}
+	input.s_20{
+	width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+	float: left;
+
+	}
+
+.form0{
+	position: relative;
+	top: 38.2%;
+}
+
+
+#footer{
+	height: 100px;
+    position: absolute;
+    bottom: 44px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    
+  
+}
+#foot2{
+	height: 14px;
+	width: 720px;
+	margin: 16px auto 10px auto;
+	
+}
+#foot2.a:link,a:visited,a:hover{color:#00c;}
+#foot2.a:active{color: #F90;}
+a#set2{
+	width:70px;
+	height: 14px;
+	margin: 0 10px; 
+}
+a.men4{
+	width: 40px;
+	height: 14px;
+	margin: 0 10px;
+}
+a.men4:link{color: #00c;}
+a.men4:visited{color:#00c;}
+a.men4:hover{color: #00c;}
+a.men4:active{color: #F90;}
+#foot3{
+	height: 20px;
+	width: 720px;
+	color:#666;
+	margin-left: auto;
+	margin-right: auto;
+}
+#foot3 a {color: #666;}

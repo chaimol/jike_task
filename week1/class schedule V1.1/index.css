@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* 课程表的CSS文件版本号V1 */
+
+td th tr {text-align:center;
+	background-color: #F00;
+	}
+th{background-color:#FF0;}
+
+table.table0{
+	border-layout:fixed;
+	border-collapse: collapse;
+	border-color: #9C0;	 
+	text-align:center;
+	 }
