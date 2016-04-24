@@ -1,0 +1,131 @@
+
+@main--color:#29726f;
+@bg--color:#e8d16a;
+@text--color1:#56725d;
+@text--color2:#fff;
+@slide:20px;
+@slide--width:30px;
+@ico--width:7px;
+/*下面的路段名的样式*/
+.rode--station{
+	line-height:30px;
+	font-weight:bolder;
+	border-top:1px solid #000;
+	border-right:1px solid  #000;
+	color:@text--color1;
+	background-color:@bg--color;
+}
+
+.block{
+	display:block;
+}
+.container{
+	text-align:center;
+	user-select: none;
+	height:390px;
+	border:2px solid #000;
+}
+
+.left-content{
+	width:20%;
+	float:left;
+}
+
+.right-content{
+	width:80%;
+	background-color:@main--color;
+	float:left;
+}
+.left-top{
+	height:180px;
+}
+.ico-bus--logo{
+	font-size:30px;
+	font-weight:bolder;
+	color:@text--color1;
+	float:left;
+	margin:15px;
+}
+
+.station--number{
+	font-size:100px;
+	font-weight:bolder;
+}
+.left-bottom{
+	text-align:center;
+	padding:10px;
+}
+.station-name{
+	float:left;
+	width:@slide;
+	font-size:18px;
+	margin:10px 5px;
+	color:@text--color2;
+	height:340px;
+	cursor:pointer;
+	&:hover{
+	color:#f00;
+	}
+}
+.label{
+	text-align:left;
+}
+.right-top{
+	background-colorL:@main--color;
+	height:360px;
+}
+
+.right-bottom{
+	background-color:@bg--color;
+	height:30px;
+	cursor:pointer;
+}
+
+.road-name{
+	float:left;
+	.rode--station;
+	box-sizing:border-box;
+}
+.border-left{
+	boder-left:1px solid #000;
+}
+.slide-1{
+	width:@slide--width*1;
+	line-height:15px;
+}
+.slide-2{
+	width:@slide--width*2;
+}
+.slide-3{
+	width:@slide--width*3;
+}
+.slide-4{
+	width:@slide--width*4;
+}
+.slide-5{
+	width:@slide--width*5;
+}
+.slide-6{
+	width:@slide--width*6;
+}
+
+.ico-right-arr{
+	.block;
+	margin-left: @ico--width;
+	box-sizing:border-box;
+	width:@ico--width*4;
+	height:@ico--width;
+	border:@ico--width solid;
+	border-top-width: @ico--width;
+	border-bottom-width: @ico--width;
+	border-left-width: @ico--width*2;
+	border-right-width: @ico--width*2;
+	border-left-color: #f00;
+	border-right-color:transparent;
+	border-top-color: transparent;
+	border-bottom-color: #f00;
+	transform: skewX(45deg);
+}
+.ico-right-arr2{
+	transform:rotateX(180deg) skewX(45deg);
+}
