@@ -14,7 +14,8 @@ sql.php   baidu新闻管理页面
 7.启用addslashes() 函数，转义” ’ \  null解决了有这类符号时，无法插入的问题。
 
 
-http://www.111cn.net/phper/30/PHP-Session-0606.htm 
-XSS: php htmlspecialchars() 
-CSRF: http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html 
-http://rrylee.github.io/2015/10/15/php-csrf-quick-and-useful/
+	
++XSS: php htmlspecialchars() 
++PHP Session：http://www.111cn.net/phper/30/PHP-Session-0606.htm 
++CSRF: http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html 
++http://rrylee.github.io/2015/10/15/php-csrf-quick-and-useful/
