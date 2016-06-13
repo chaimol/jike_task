@@ -1,0 +1,298 @@
+red hat Linux5使用说明
+这是Linux的操作系统，使用的VMware 安装的虚拟机的操作系统
+##          用户    密码
+超级管理员	root   
+			chaimol  
+##
+切换用户su
+su -   切换回root目录（需要输入密码，Linux下输入的密码是不可见的）
+su -chaimol	切换到chaimol用户模式下
+
+#切换到不同的目录位置cd
+cd ~  	快速进入/home/chaimol目录  （在非root用户模式下 ）
+cd -	返回进入本目录前所在的目录
+mkdir newfile  创建一个名字为newfile的文件夹
+cd  ../   (进入上一级目录)    
+cd  ./home  (进入同级的home文件夹)
+mkdir  name  新建一个名字是name的文件夹
+touch myfirst.txt  新建一个名字为myfirst的txt文件
+rm -rf myfirst.txt  删除名字为myfirst.txt的文件
+
+#复制cp
+cp inex.html testBaidu	复制index.html到testBaidu文件夹内（会自动把时间戳改为当前的时间戳）
+cp -p index.html testBaidu 复制index.html到testBaidu文件夹内(时间戳仍然是源文件的时间戳)
+cp  index.html index.css index.js  testBaidu 复制index.html，index.css，index.js文件到testBaidu文件夹内
+cp -r cat dog	把cat文件夹复制到dog文件夹内
+#移动、重命名mv
+mv cat dog	cat重命名为dog
+mv cat/ dog/	cat文件夹内容移动到dog文件夹，同时删除cat文件夹
+rm index.html  删除index.html 会要求确认是否删除，输入y，则删除。
+rm -f inex.html 删除index.html ，不要求再次确认。
+rm -r dog/	删除dog文件夹，需要再次确认，输入y，则删除。（删除文件夹时，则会进入该文件夹，要求你一一确认是否删除文件夹里的每一项）
+rm -rf dog/	删除dog文件夹，不需要再次确认。
+
+#查看文件夹内容ls
+pwd 显示当前所在的目录
+dir 	查看目录内容（只显示文件名）
+ls -l   查看所在目录内容（包括文件名和时间等详细列表）   
+ls -la  查看包含隐藏文件在内的本目录所有内容（文件大小全部显示以字节为单位显示）
+ls  	显示当前所在的目录内容（只显示文件名）
+ls /	显示根目录的内容
+ls -a	显示本目录内包含隐藏文件在内的所有文件（只显示文件名）
+ls -ld	显示本目录自身的信息
+ls -lh	显示本目录下所有内容（以列表的形式，只是文件大小会以合适的单位表示）
+file index.css 确认index.css的文件格式
+cat index.css 打开index.css文件查看文本文件
+less index.txt 查看index.txt文件
+
+#使用less打开后命令
+g  返回头部
+G  返回底部
+/chaimol 搜索chaimol
+n  搜索后的操作。小写的n向上搜索
+N  大写的N,向下搜索。
+（键盘按键）pageUp	上一页
+（键盘按键）PageDown 下一页
+q 退出
+
+Linux的日期是以1970年1月1日为1，开始计算天数的。例如3，表示1970年1月3日。
+##目录系统（Linux系统文件名区分大小写）
+1.home目录
+	root用户的目录是/root
+	普通用户的目录是/home/用户名
+2.bin目录
+	常用的可执行文件
+	/bin、/usr/bin、/sbin等
+3.外部设备mountpoint
+	/media、/mnt
+	当检测到设备时会自动挂载
+4./etc，系统配置文件
+5./tmp,临时文件
+6./boot 系统内核和开机必要文件
+7./dev 系统所有的设备文件
+8./usr	
+	unix system resource(系统文件)
+	保存程序的相关文件
+9./lost+found
+	每个分区都会自动创建
+10./var、/srv(保存数据库数据等，会自动增大)
+11./proc 
+12./lib、/usr/lib、（可复用的库）
+
+更改文件的权限
+r 读
+w 写
+x 执行
+更改文件的权限的方式
+使用ls -l查看目录文件的详细列表包括使用权限日期内容等。
+例如：下面的
+drwxrwxr-x 3 root root  4096 05-31 17:25 perm  
+前面的d是目录文件，依次是U（拥有者）G（用户组）O（其他）的权限。
+这里是d(目录)rwx（拥有者——拥有读写执行权限）rwx(用户组——拥有读写执行权限) r-x(其他——拥有读执行的权限)
+1.使用字符表示法
+chmod [-R] UGO+rwx perm //将perm目录（如果添加了—R，则更改权限包括目录下所有文件）权限更改为全部具有读写执行操作。
+2。使用数字模式
+r 4
+w 2
+x 1
+没有权限是0
+chmod 777 perm //将perm目录权限更改为全部具有读写操作。
+3.使用可视化界面改变
+
+压缩打包
+压缩工具
+Linux支持的压缩格式
+1. *.Z  ,compress程序压缩文件
+2. *.gz ,gzip程序压缩文件
+3. *.bz2 ,bzip2程序压缩文件
+4. *.tar ,tar程序打包文件，并未压缩
+5. *.tar.gz ,tar打包的档案，使用gzip压缩
+6. *.tar.bz2 ,tar打包的文件，使用bzip2压缩
+
+gzip压缩工具
+
+gzip perm 压缩perm
+gzip -c perm >perm.gz  压缩perm，同时保留原文件。
+gzip -cv perm.gz 显示perm.gz的压缩比
+gzip -c perm 压缩文件perm
+gzip -d perm.gz 解压缩perm.gz文件
+1、gzip  [-cdtv#]  文件名称 
+ 1）扩展名为*.gz 
+ 2）-c：将压缩的数据输出到屏幕上 
+ 3）-d：解压缩的参数 
+ 4）-t：进行文件的一致性校验看是否损坏 
+ 5）-v：显示和原文件相比的压缩比 
+ 6）-#：压缩等级，-1最快，-9最慢，默认是-6 
+
+2、bzip2  [-cdkzv#]  文件名称 
+ 1）扩展名为*.bz2  
+ 2）-c：将压缩的数据输出到屏幕上 
+ 3）-d：解压缩的参数，该参数代表执行解压缩操作 
+ 4）-k：保留原文件并不删除原始文件 
+ 5）-z：压缩的参数，该参数代表是执行压缩操作 
+ 6）-v：显示和原文件对比的压缩比 
+ 7）-#：压缩等级，-1最快，-9最慢，默认是-6 
+
+
+Linux文件打包指令
+1、tar   [-jcv]  –f  finaname.tar.bz2  待压缩的档案或者目录名 
+ 将某个文件或者目录打包并使用bzip2压缩成一个文件 
+2、tar   [-jxv]  –f  filename.tar.bz2  –C  解压缩的目录 
+ 将压缩文件解压缩至特定的目录 
+3、参数解释 
+ 1）-c：建立打包档案 
+ 2）-t：查看打包的文件都有哪些文件名 
+ 3）-x：解压缩或者解打包文件，和-C搭配使用解压缩至特定目录 
+ 4）-j：通过bz2支持进行压缩或者解压缩 
+ 5）-z：使用gzip进行压缩或者解压缩 
+ 6）-v：将正在处理的文件名显示出来 
+ 7）-f：紧跟要被处理的文件名，建议单独写一个选项 
+3.使用zip压缩打包
+zip -f filename.zip 文件夹名    //使用zip压缩
+
+vi编辑器（记事本）
+vim编辑器（编写代码使用，全面兼容vi的指令）
+vi常用的命令
+vi perm 打开文件perm,如果不存在，则会在保存时，新建并保存该文件。
+vi的三种模式
+1）命令模式，可以移动光标，修改、删除、复制、搜索
+2）插入模式，通过a或者i或者o进入，可以修改文件内容
+3）扩展模式，在insert，模式下先按下Esc键（左上角），再按冒号： 通过:进入，退出、保存、查找替换
+
+4.命令行下删除更改复制
+		Change		Delete 		Yank(copy)
+Line 	cc			dd			yy
+Letter	cl   		dl 			yl
+Word  	cw			dw   		yw
+
+5、撤销操作
+	1）u，撤销最近一次的修改，undo
+	2）ctrl-r，取消最后一次的撤销，redo
+	3）U，撤销所有修改
+6、查找操作
+	1）/text，向后搜索
+	2）?text，向前搜索
+	3）n，搜索下一个同样的内容
+	4）N，搜索上一个同样的内容
+7、粘贴操作
+	1）用p粘贴复制、修改或者删除的数据
+	2）对于行，p粘贴在行上，P粘贴在行下
+	3）对于字符，p粘贴在字符右侧，P粘贴在字符左侧
+8、命令模式下的一些技巧
+	1）dtc，删除从光标到c之间的所有字符
+	2）rc，将光标下的字符替换为c
+	3）dw删除游标处所在的字符
+	4）5dd，删除5行数据
+	5）5yy，复制5行数据
+	6）5x，删除5个字符
+	7）R，进入替换状态，esc退出
+9、保存、退出，进入扩展模式
+	1）:w，保存
+	2）:q，退出
+	3）:wq，保存并退出
+	4）:w!，强制保存
+	5）:q!，强制退出
+	6）:wq!，强制保存退出
+
+vi编辑器的进阶使用
+1、文件内定位
+	1）G，跳转到文件最后一行
+	2）1G，跳转到文件的第一行
+	3）ctrl-d，往下滚动半屏
+	4）ctrl+u，往上滚动半屏
+2、屏幕定位相关
+	1）H，跳转到本屏显示的第一行
+	2）M，调转到本屏显示的中间一行
+	3）L，跳转到本屏显示的最后一行
+	4）z+Enter，使当前的行成为屏幕显示的第一行
+	5）z-，使当前行成为屏幕的最后一行
+3、查找并批量替换
+	1）通过sed来查找
+	2）默认对当前行进行查找
+	3）1,10，对1-10行进行查找
+	4）1,$ %，对整个文件查找
+4、读取和保存
+	1）:r file，将另外一个file的内容读入到当前文件
+	2）1,20 w file，将1-20行的内容写入到一个新的file中
+	3）1,$ w file，将整个文件写入一个新的file
+	4）1,20 w>>file，将1-20行数据追加到file中
+	5）:n，跳到下一个文件
+	6）:rew，回到第一个文件
+5、查找并批量替换
+	1）通过sed来查找
+	2）默认对当前行进行查找
+	3）1,10，对1-10行进行查找
+	4）1,$ %，对整个文件查找
+6、读取和保存
+	1）:r file，将另外一个file的内容读入到当前文件
+	2）1,20 w file，将1-20行的内容写入到一个新的file中
+	3）1,$ w file，将整个文件写入一个新的file
+	4）1,20 w>>file，将1-20行数据追加到file中
+7、设置
+	1）:set，显示常用的配置选项
+	2）:set all，显示所有的配置选项
+	3）:set number，设置行号
+
+
+下载文件
+wget https://www.baidu.download.min.css    //从指定网址下载文件
+
+cal >pem2  //cal是输出日历命令，后面的大于号（重定向），是把屏幕的输出保存到perm2里。如果perm2不存在，则新建并保存输出的数据。注意:执行此操作会替换文件里原有的内容。
+cal >>pem2  //这里的两个大于号（重定向），是追加到pem2,并保存。
+
+mkdir test&&cd test&&touch baidu.txt //这里连接几个命令用的是&&，只有在前一个命令正确执行后，后一个才会继续执行。
+bash1||bash2  //这里的||  表示，只有前一个命令执行错误时，才会执行后一个命令。
+管道命令
+管道符是|
+
+cat perm |wc -l  //统计perm里有几行内容
+cat perm |wc -w  //统计perm里总共有几个词
+cat perm |wc -m  //统计perm里字符数
+
+更改环境变量
+vim  ~/./.bashrc  在其后面增加内容后，执行source ~/./.bashrc 
+vim /etc/profile  在其后面增加内容后，执行source /etc/profile
+export  查询环境变量
+echo $PATH 单独查看PATH环境变量
+
+
+mysql数据库的连接
+详细地址：http://www.cnblogs.com/mfryf/archive/2012/02/12/2348164.html
+mysql -u root -p 123  //连接数据库 用户名为root ，密码为123
+
+
+>>mysql数据库里面的操作命令
+show databases;   //显示当前所有的数据库名
+create database phplesson1; //创建新的名为phplesson1的数据库。
+use phplesson1; //使用名为phplesson1的数据库。
+source lesson1.sql; //导入表名为phplesson1.sql的表
+source userinfo.sql; //导入表名为userinfo.sql的表
+
+
+pm2使用
+$ npm install pm2 -g     # 命令行安装 pm2 
+$ pm2 start app.js -i 4  # 后台运行pm2，启动4个app.js 
+                         # 也可以把'max' 参数传递给 start
+                         # 正确的进程数目依赖于Cpu的核心数目
+$ pm2 start app.js --name my-api # 命名进程
+$ pm2 list               # 显示所有进程状态
+$ pm2 monit              # 监视所有进程
+$ pm2 logs               # 显示所有进程日志
+$ pm2 stop all           # 停止所有进程
+$ pm2 restart all        # 重启所有进程
+$ pm2 reload all         # 0 秒停机重载进程 (用于 NETWORKED 进程)
+$ pm2 stop 0             # 停止指定的进程
+$ pm2 restart 0          # 重启指定的进程
+$ pm2 startup            # 产生 init 脚本 保持进程活着
+$ pm2 web                # 运行健壮的 computer API endpoint (http://localhost:9615)
+$ pm2 delete 0           # 杀死指定的进程
+$ pm2 delete all         # 杀死全部进程
+
+
+shell脚本使用
+新建名为test.sh的shell脚本文件
+内容如下
+#!/bin/bash   //使用bash解析器
+echo "hello world!"//屏幕输出hello world
+
+chmod +x test.sh   //使脚本具有执行权限

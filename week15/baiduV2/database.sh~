@@ -1,0 +1,14 @@
+#!/bin/bash
+#connect the mysql 
+user="root"
+password="123"
+databasename="phplesson1" 
+table="lesson1"
+mysql -u $user -p phplesson1;
+#
+#	create database phplesson1;
+#	use database phplesson1;
+#	set names utf8;
+#	source lesson1.sql;
+#	source userinfo.sql;
+

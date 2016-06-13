@@ -1,0 +1,146 @@
+<!--reg.ejs注册界面 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>注册</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+.form-group {
+	margin-top: 20px;
+}
+.glyphicon {
+	margin-right: 15px;
+}
+.label0{
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="container">
+   <%if (locals.success) { %> 
+          <div id="alt_sucess" class="alert alert-success"> 
+            <%- success %> 
+          </div> 
+       <% } %> 
+
+      <% if (locals.error) { %> 
+        <div id="alt_warning" class="alert alert-warning"> 
+          <%- error %> 
+        </div> 
+      <% } %> 
+  <form class="form-horizontal" method="post">
+    <div class="form-group">
+      <div class="col-sm-6 col-sm-offset-4 label0"><h2>注册</h2></div>
+    </div>
+    <div class="form-group">
+      <label for="txtUserName" class="col-sm-2 col-sm-offset-2 control-label">userName</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="txtUserName" name="txtUserName" autocomplete="off" required="required" placeholder="用户名">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="txtUserPwd" class="col-sm-2 col-sm-offset-2 control-label">Password</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="txtUserPwd" name="txtUserPwd" required="required" placeholder="密码">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="txtUserRePwd" class="col-sm-2 col-sm-offset-2 control-label">Password</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="txtUserRePwd" name="txtUserRePwd" required="required" placeholder="再次确认密码">
+      </div>
+    </div>
+    <div class="form-group ">
+      <div class="col-sm-offset-4 col-sm-3">
+        <button type="submit" class="btn btn-info btn-lg btn-block" id="btnSub" value="submit">注册</button>
+       
+      </div>
+      <div class="col-sm-offset-0 col-sm-3">
+         <a class="btn btn-info btn-lg btn-block" href="/login">登录</a>
+      </div>
+    </div>
+  </form>
+</div>
+<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+
+<script type="text/javascript">
+     String.prototype.format = function (args) {
+            var result = this;
+            if (arguments.length > 0) {
+                if (arguments.length == 1 && typeof (args) == "object") {
+                    for (var key in args) {
+                        if (args[key] != undefined) {
+                            var reg = new RegExp("({" + key + "})", "g");
+                            result = result.replace(reg, args[key]);
+                        }
+                    }
+                }
+                else {
+                    for (var i = 0; i < arguments.length; i++) {
+                        if (arguments[i] != undefined) {
+                            var reg = new RegExp("({)" + i + "(})", "g");
+                            result = result.replace(reg, arguments[i]);
+                        }
+                    }
+                }
+            }
+            return result;
+    }
+
+    $(function(){
+        $('#btnSub').on('click',function(){
+
+            var 
+            $txtUserName = $('#txtUserName'),
+            txtUserNameVal = $.trim($txtUserName.val()),     //$.trim(value)作用是去除"value"两边的空格       
+            $txtUserPwd = $('#txtUserPwd'),
+            txtUserPwdVal = $.trim($txtUserPwd.val()),
+            $txtUserRePwd = $('#txtUserRePwd'),
+            txtUserRePwdVal = $.trim($txtUserRePwd.val()),
+            
+            console.log(txtUserRePwd);
+            errorTip = '<div id="errorTip" class="alert alert-warning">{0}</div> ';
+
+            $("#errorTip,#alt_sucess,#alt_warning").remove();
+            
+            if(txtUserNameVal.length == 0)
+            {     // prepend()方法在被选元素的开头(仍位于内部)插入指定内容。               
+                $("#container").prepend(errorTip.format('用户名不能为空'));  
+                $txtUserName.focus();
+                return false;
+            }
+
+            if(txtUserPwdVal.length == 0)
+            {                
+                $("#container").prepend(errorTip.format('密码不能为空'));
+                $txtUserPwd.focus();
+                return false;
+            }
+
+            if(txtUserRePwdVal.length == 0)
+            {
+                $("#container").prepend(errorTip.format('重复密码不能为空'));                
+                $txtUserRePwd.focus();
+                return false;
+            }
+
+            if(txtUserPwdVal != txtUserRePwdVal)
+            {                 
+                 $("#container").prepend(errorTip.format('两次密码不一致'));  
+                 $txtUserPwd.focus();
+                 return false;
+            }
+
+            return true;
+        })
+    });
+
+</script>
+
+</body>
+</html>

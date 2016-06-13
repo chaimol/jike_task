@@ -1,0 +1,272 @@
+/*百度新闻css文件
+	2015-11-23
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#header {
+    background-color: #3e98f0;
+    height: 44px;
+}
+
+#content {
+    background-color: #3e98f0;
+}
+
+.logo {
+    min-width: 320px;
+    text-align: center;
+}
+
+.btn {
+    z-index: 2;
+    width: 34px;
+    height: 44px;
+    line-height: 44px;
+    float: left;
+    background: url("../images/news.png") no-repeat;
+    background-size: 40px 500px;
+}
+
+.btn-logo {
+    background-position: center 4px;
+}
+
+.btn-userhome {
+    background-position: center -463px;
+}
+
+.btn-search {
+    float: right;
+    background-position: center -162px;
+}
+
+.btn-subscribe {
+    float: right;
+    background-position: center -107px;
+}
+
+ul.nav {
+    height: 66px;
+    list-style: none;
+}
+
+.nav-title {
+    float: left;
+    width: 16.667%;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    color: #fff;
+    display: inline;
+}
+
+.nav_line {
+    position: relative;
+    left: 10px;
+    border-right: 1px solid #fff;
+}
+
+.nav_line2 {
+    position: relative;
+    left: 30%;
+    height: 12px;
+    width: 1px;
+    border-right: 1px solid #fff;
+}
+
+.nav-width {
+    width: 33.334%;
+}
+
+.top-slide {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#gallery {
+    position: absolute;
+}
+
+.slide1 {
+    float: left;
+    min-height: 187px;
+    height: inherit;
+    width: 100%;
+}
+
+.slide1 img {
+    width: 640px;
+    height: 400px;
+}
+
+.index-list-item {
+    clear: both;
+    border-bottom: 1px solid #f6f6f6;
+    overflow: hidden;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+.index-list-title {
+    /*height: 20px;*/
+    font-size: 16px;
+    line-height: 20px;
+    color: # 263b31;
+    margin: -1px 0 4px 0;
+}
+
+.index-list-content {
+    line-height: 20px;
+    font-size: 13px;
+    color: #b8bac0;
+    font-weight: 400;
+}
+
+.index-list-image {
+    width: 95px;
+    height: 68px;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    background-color: #f4f7f9;
+}
+
+.index-list-image img {
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.index-list-bottom {
+    line-height: 20px;
+    margin-top: ]10px;
+}
+
+.index-list-bottom b {
+    font-size: 12px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.list-main-site {
+    display: none;
+}
+
+.tip-time {
+    color: #b8bac0;
+}
+
+.tip-reason {
+    background-color: #e02f2f;
+    color: #fff;
+    border: 1px solid transparent;
+    float: right;
+    margin-right: 10px;
+}
+
+.index-list-album-container {
+    height: 111px;
+    width: 100%;
+}
+
+.index-list-item-image {
+    clear: both;
+    height: 169px;
+    margin: 5px 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.index-list-album {
+    float: left;
+    width: 33.33%;
+    height: 110px;
+    overflow: hidden;
+}
+
+.index-list-album img {
+    width: 100%;
+}
+
+.bg-blue {
+    background-color: #0da5fc;
+}
+
+.index-list-media {
+    margin: 10px;
+}
+
+.index-list-media img {
+    width: 100%;
+    height: 100%;
+}
+
+.index-main-up {
+    float: right;
+}
+
+.index-main-up i {
+    display: inline-block;
+    background: url("../images/zan.png") no-repeat;
+    background-size: 50px 150px;
+    background-position: -6px -70px;
+    color: #545454;
+    width: 17px;
+    height: 17px;
+}
+
+.index-main-up b {
+    color: #545454;
+}
+
+.nav2 {
+    height: 100px;
+    list-style: none;
+    display: none;
+    background-color: #3e98f0;
+}
+
+.top-text {
+    width: 8.44%;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    margin: 0 10px;
+    padding-right: 10px;
+    color: #fff;
+    border-right: 1px solid #fff;
+}
+
+.top-text a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.upslide {
+    float: right;
+    width: 10%;
+    margin-right: 10px;
+    color: #fff;
+    line-height: 33px;
+    height: 33px;
+}
+
+.down-nav {
+    display: none;
+}
+
+.under_line {
+    border-bottom: 1px solid #fff;
+}

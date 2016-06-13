@@ -1,0 +1,7 @@
+#!/bin/bash
+#开启pm2使用
+
+pm2 start app.js --name "baidu"
+pm2 list
+pm2 monit
+
