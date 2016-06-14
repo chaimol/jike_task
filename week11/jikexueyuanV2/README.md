@@ -27,7 +27,7 @@ browserify gulp-browserify  模块化
     gulp-rev//md5戳
     gulp-rev-collector //配合gulp-rev使用，将页面文件依赖转为md5处理后的地址
     gulp-connect//开启本地gulp的服务器，默认8080端口
-##产品输出(输出目录为../build，测试时需要联网，因大部分图片链接自极客学院的服务器)
+##产品输出(输出目录为./build，测试时需要联网，因大部分图片链接自极客学院的服务器)
 'bash
 gulp
 

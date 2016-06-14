@@ -5,10 +5,10 @@ $(document).ready(function() {
     //左侧主菜单栏start
     $(".lesson-classfiy-nav ul").mouseover(function() {
 
-        $(".lesson-classfiy-nav ul").css("height", "408px");
+        $(".lesson-classfiy-nav ul").css({"height":"408px","overflow":"visible"});
     });
     $(".lesson-classfiy-nav ul").mouseleave(function() {
-        $(".lesson-classfiy-nav ul").css("height", "305px");
+        $(".lesson-classfiy-nav ul").css({"height":"305px","overflow":"hidden"});
         $(".lesson-list-show").hide();
     });
     $(".left-nav li").each(function(index) {

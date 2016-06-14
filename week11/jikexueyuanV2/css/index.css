@@ -1288,6 +1288,8 @@ p.p-select {
   overflow: hidden;
   border-bottom-width: 0;
   height: 305px;
+  position: relative;
+  z-index: 105;
 }
 .left-nav li:hover {
   border-left: 2px solid #35b558;
