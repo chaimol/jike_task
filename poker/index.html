@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>扑克牌实例</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="plum-4 poker">
+            <div class="face">
+                <div class="top">
+                    <div class="left">
+                        <span class="num">4</span>
+                        <span class="img-s">&clubs;</span>
+                    </div>
+                    <div class="right">
+                        <span class="img-b img-b-l">&clubs;</span>
+                        <span class="img-b img-b-r">&clubs;</span>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <span class="num">4</span>
+                        <span class="img-s">&clubs;</span>
+                    </div>
+                    <div class="right">
+                        <span class="img-b img-b-l">&clubs;</span>
+                        <span class="img-b img-b-r">&clubs;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="b-b1">
+                    <div class="b-b2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spade-9 poker">
+            <div class="face">
+                <div class="top">
+                    <div class="left">
+                        <span class="num">9</span>
+                        <span class="img-s">&spades;</span>
+                    </div>
+                    <div class="right">
+                        <span class="img-b img-b-l">&spades;</span>
+                        <span class="img-b img-b-r">&spades;</span>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <span class="num">9</span>
+                        <span class="img-s">&spades;</span>
+                    </div>
+                    <div class="right">
+                        <span class="img-b img-b-l">&spades;</span>
+                        <span class="img-b img-b-r">&spades;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="b-b1">
+                    <div class="b-b2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".poker").each(function(i) {
+            $(this).on("mouseenter", function() {
+                $(".face").eq(i).fadeOut(300);
+                $(".back").eq(i).fadeIn(300);
+            });
+            $(this).on("mouseleave", function() {
+                $(".back").eq(i).fadeOut(300);
+                $(".face").eq(i).fadeIn(300);
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>

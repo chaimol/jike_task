@@ -1,0 +1,183 @@
+// index.css
+
+/*样式初始化*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: courier new, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clear-fix:after {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    zoom: 1;
+}
+
+
+.content {
+    box-sizing: border-box;
+    font-family: '宋体', '隶书', arial, georgia, verdana, helvetica, sans-serif;
+    user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    -khtml-user-select:none;
+    cursor: pointer;
+}
+
+.poker {
+    width: 570px;
+    height: 880px;
+    border: 1px solid #000;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: left;
+    margin-left: 10px;
+}
+
+.num {
+    width: 56px;
+    height: 115px;
+    line-height: 115px;
+    font-size: 115px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: block;
+}
+
+.img-s {
+    width: 56px;
+    height: 75px;
+    font-size: 75px;
+    margin-left: 32px;
+    margin-top: -45px;
+    display: block;
+}
+
+.img-b {
+    width: 125px;
+    height: 167px;
+    line-height: 167px;
+    font-size: 167px;
+    margin-top: 78px;
+    display: inline-block;
+}
+
+.img-b-r {
+    margin-left: 90px;
+}
+
+
+.bottom {
+    clear: both;
+    behavior:url(PIE.htc);
+    -ms-transform:rotate(180deg) translate(44px,-644px);
+    transform:rotate(180deg) translate(44px,-644px);
+    -webkit-transform:rotate(180deg) translate(44px,-644px);
+    -o-transform:rotate(180deg) translate(44px,-644px);
+   	-moz-transform:rotate(180deg) translate(44px,-644px);
+}
+
+
+.back {
+    display: none;
+    padding: 10px;
+}
+.b-b1{
+    height: 860px;
+	background: url(bg-0.png) repeat #fdf8fb;
+}
+
+
+
